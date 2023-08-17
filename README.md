@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Usefull links
+
+[Failed to parse source map from X error in React [Solved]](https://bobbyhadz.com/blog/failed-to-parse-source-map-in-create-react-app#:~:text=The%20warning%20%22Failed%20to%20parse,env%20file.)
+
+[Module not found: Can't resolve '@mui/material' [Solved]](https://bobbyhadz.com/blog/react-module-not-found-cant-resolve-mui-material)
+
+[Cannot read properties of undefined (reading 'direction') React JS Material Table](https://stackoverflow.com/questions/71564028/cannot-read-properties-of-undefined-reading-direction-react-js-material-tabl)
+
+[React Material Data-tables Example with Pagination, Sorting, Filter, Dynamic Data](https://www.freakyjolly.com/react-material-data-tables-example-with-pagination-sorting-filter-dynamic-data/)
+
+[material-table](https://material-table.com/)
+
+[Search not working with React material-table using remote data](https://stackoverflow.com/questions/57186980/search-not-working-with-react-material-table-using-remote-data)
