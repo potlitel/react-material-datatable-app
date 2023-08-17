@@ -1,4 +1,5 @@
 import React, { useState, Component } from "react";
+import { notification } from "antd";
 import "./App.css";
 import MaterialTable from "material-table";
 
@@ -63,16 +64,18 @@ function App() {
           alt="alt"
         />
       ),
+      width: "20%",
     },
     {
       title: "Id",
       field: "id",
-      cellStyle: {
-        width: 50,
-      },
+      // cellStyle: {
+      //   width: 50,
+      // },
+      width: "10%",
     },
-    { title: "First Name", field: "first_name" },
-    { title: "Last Name", field: "last_name" },
+    { title: "First Name", field: "first_name", width: "30%" },
+    { title: "Last Name", field: "last_name", width: "30%" },
   ];
 
   // Material Table Columns Rows
@@ -124,8 +127,10 @@ function App() {
   const tableRef = React.createRef();
 
   return (
-    <div className="App wrapper">
-      <h2>React Material Datatable</h2>
+    <div className="flex w-3/4 justify-center flex-col m-auto h-screen">
+      <h2 className="text-2xl font-bold text-center">
+        React Material Datatable
+      </h2>
       <ThemeProvider theme={defaultMaterialTheme}>
         <MaterialTable
           title="Remote Data Example"
@@ -157,13 +162,27 @@ function App() {
             {
               icon: SaveAlt,
               tooltip: "Save User",
-              onClick: (event, rowData) => console.log("You saved ", rowData),
+              onClick: (event, rowData) => {
+                console.log("You saved ", rowData);
+                notification.success({
+                  placement: "bottomRight",
+                  message: "You saved the following object",
+                  description: JSON.stringify(rowData),
+                });
+              },
             },
             {
               icon: Delete,
               tooltip: "Delete User",
-              onClick: (event, rowData) =>
-                console.log("You want to delete ", rowData),
+              onClick: (event, rowData) => {
+                // eslint-disable-next-line no-unused-expressions
+                console.log("You want to delete ", rowData);
+                notification.success({
+                  placement: "bottomRight",
+                  message: "You want to delete the following object",
+                  description: JSON.stringify(rowData),
+                });
+              },
             },
           ]}
         />
